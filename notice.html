@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>공지사항 — Autolab (오토랩)</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif; color:#222; line-height:1.7; }
+  header { background:#102a43; color:#fff; padding:24px 20px; }
+  .wrap { max-width:800px; margin:0 auto; padding:0 16px; }
+  header a { color:#9fb3c8; text-decoration:none; font-size:.9em; }
+  main { padding:36px 0 60px; }
+  .notice { border:1px solid #d9e2ec; border-radius:10px; margin-bottom:18px; overflow:hidden; }
+  .notice .head { background:#f0f4f8; padding:12px 18px; display:flex;
+                  justify-content:space-between; flex-wrap:wrap; gap:6px; }
+  .notice .head b { color:#102a43; }
+  .notice .date { color:#627d98; font-size:.88em; }
+  .notice .body { padding:16px 18px; font-size:.95em; }
+  .notice .body table { border-collapse:collapse; margin:8px 0; }
+  .notice .body td { border:1px solid #d9e2ec; padding:6px 12px; }
+  .tag { display:inline-block; background:#2b6cb0; color:#fff; font-size:.75em;
+         border-radius:4px; padding:1px 8px; margin-right:8px; vertical-align:2px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1 style="font-size:1.3em;">공지사항</h1>
+    <a href="index.html">← Autolab 홈으로</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <!-- ── 새 공지는 이 블록을 복사해 맨 위에 추가하세요 ─────────── -->
+    <article class="notice">
+      <div class="head">
+        <span><span class="tag">공고</span><b>정기주주총회 소집 공고 (예시)</b></span>
+        <span class="date">2027-03-10 게시</span>
+      </div>
+      <div class="body">
+        <p>상법 및 당사 정관에 의거하여 정기주주총회를 아래와 같이 개최하오니
+           주주님들께서는 참석하여 주시기 바랍니다.</p>
+        <table>
+          <tr><td><b>일시</b></td><td>2027년 3월 25일 (목) 10:00</td></tr>
+          <tr><td><b>장소</b></td><td>전라남도 나주시 ○○로 ○○, 본사 회의실</td></tr>
+          <tr><td><b>회의 목적사항</b></td>
+              <td>제1호 의안: 제1기 재무제표 승인의 건<br>
+                  제2호 의안: 이사 보수 한도 승인의 건</td></tr>
+        </table>
+        <p>오토랩 주식회사 대표이사 (직인생략)</p>
+      </div>
+    </article>
+
+    <article class="notice">
+      <div class="head">
+        <span><span class="tag">안내</span><b>홈페이지 개설 안내</b></span>
+        <span class="date">2026-11-10 게시</span>
+      </div>
+      <div class="body">
+        <p>오토랩 주식회사 홈페이지를 개설하였습니다. 회사의 공고는 본
+           공지사항 페이지에 전자공고로 게시됩니다.</p>
+      </div>
+    </article>
+
+  </div>
+</main>
+</body>
+</html>

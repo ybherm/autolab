@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autolab (오토랩) — WiFi Heatmap · 공장자동화 · 투자</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif; color:#222; line-height:1.7; }
+  header { background:#102a43; color:#fff; padding:28px 20px; }
+  .wrap { max-width:960px; margin:0 auto; padding:0 16px; }
+  header h1 { font-size:1.6em; } header p { color:#9fb3c8; }
+  nav { background:#243b53; }
+  nav .wrap { display:flex; gap:4px; flex-wrap:wrap; }
+  nav a { color:#d9e2ec; text-decoration:none; padding:12px 16px; display:block; font-size:.95em; }
+  nav a:hover { background:#334e68; }
+  section { padding:48px 0; border-bottom:1px solid #e0e6ed; }
+  section h2 { font-size:1.35em; color:#102a43; margin-bottom:6px; }
+  section .sub { color:#627d98; margin-bottom:20px; font-size:.95em; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+  .card { border:1px solid #d9e2ec; border-radius:10px; padding:20px; background:#f8fafc; }
+  .card h3 { color:#243b53; margin-bottom:8px; }
+  .card ul { padding-left:18px; }
+  canvas { width:100%; max-width:800px; display:block; border:1px solid #d9e2ec;
+           border-radius:10px; background:#eef2f6; }
+  .caption { font-size:.85em; color:#627d98; margin-top:8px; }
+  .btn { display:inline-block; margin-top:14px; background:#2b6cb0; color:#fff;
+         padding:10px 18px; border-radius:8px; text-decoration:none; }
+  footer { background:#102a43; color:#9fb3c8; padding:24px 16px; font-size:.85em; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Autolab <span style="font-weight:normal;">(오토랩)</span></h1>
+    <p>WiFi Heatmap · 공장/사무 자동화 · 투자</p>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#wifi">WiFi Heatmap</a>
+    <a href="#automation">공장자동화</a>
+    <a href="#invest">투자사업</a>
+    <a href="notice.html">공지사항</a>
+  </div>
+</nav>
+
+<!-- ───────── WiFi Heatmap ───────── -->
+<section id="wifi">
+  <div class="wrap">
+    <h2>WiFi Heatmap 측정 서비스</h2>
+    <p class="sub">물류센터·공장·사무실 현장을 직접 이동하며 WiFi(SSID) 신호세기를
+       실측하고, 히트맵으로 음영지역을 한눈에 보여 드립니다.</p>
+
+    <!-- [데모] 측정 과정 애니메이션: 실제 촬영 영상이 준비되면 아래 video 태그로 교체 -->
+    <canvas id="surveyCanvas" width="800" height="450"></canvas>
+    <p class="caption">▲ 데모: 물류센터 랙 사이를 이동하며 신호를 수집(점 색상=신호세기)하고,
+       측정 완료 후 전체 히트맵이 표시됩니다. (자동 반복)</p>
+
+    <!-- 실제 영상 교체용 (파일 업로드 후 주석 해제, 데모 canvas는 삭제)
+    <video controls muted playsinline style="width:100%;max-width:800px;border-radius:10px;">
+      <source src="media/wifi-survey.mp4" type="video/mp4">
+    </video>
+    -->
+
+    <div class="cards" style="margin-top:24px;">
+      <div class="card"><h3>측정 항목</h3>
+        <ul><li>SSID별 RSSI(신호세기) 실측</li><li>AP 커버리지·음영지역 분석</li><li>채널 간섭 점검</li></ul></div>
+      <div class="card"><h3>결과물</h3>
+        <ul><li>평면도 기반 Heatmap 보고서</li><li>AP 재배치·증설 제안</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── 공장자동화 ───────── -->
+<section id="automation">
+  <div class="wrap">
+    <h2>공장자동화 · 사무자동화</h2>
+    <p class="sub">중소기업을 위한 자동화 컨설팅과 소프트웨어 용역 개발을 수행합니다.</p>
+    <div class="cards">
+      <div class="card"><h3>자동화 컨설팅</h3>
+        <ul><li>공장 생산라인 자동화 진단·설계</li><li>사무업무(RPA·문서처리) 자동화 컨설팅</li></ul></div>
+      <div class="card"><h3>자동화 SW 용역</h3>
+        <ul><li>PLC 연동·모니터링 SW 개발</li><li>생산/재고 관리 등 맞춤형 프로그램 개발</li></ul></div>
+    </div>
+    <a class="btn" href="mailto:contact@autolab.co.kr">컨설팅 문의하기</a>
+  </div>
+</section>
+
+<!-- ───────── 투자사업 ───────── -->
+<section id="invest">
+  <div class="wrap">
+    <h2>투자사업</h2>
+    <p class="sub">회사 가용자금을 활용한 주식·채권 등 금융자산 투자를 수행합니다.</p>
+    <div class="cards">
+      <div class="card"><h3>운용 원칙</h3>
+        <ul><li>자기자본 범위 내 운용</li><li>주식·채권 중심의 분산 투자</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    ⓒ 2026 Autolab Inc. (오토랩 주식회사) · 본점: 전라남도 나주시<br>
+    회사의 공고는 <a href="notice.html" style="color:#d9e2ec;">공지사항</a> 페이지에 게시됩니다.
+  </div>
+</footer>
+
+<script>
+/* ── WiFi 측정 데모 애니메이션 ───────────────────────────── */
+const cv = document.getElementById('surveyCanvas');
+const ctx = cv.getContext('2d');
+const W = cv.width, H = cv.height;
+
+/* 물류센터 구성: AP 3대, 랙 4열 */
+const aps = [{x:150,y:80,n:'AP1'},{x:650,y:90,n:'AP2'},{x:400,y:370,n:'AP3'}];
+const racks = [ {x:90,y:105,w:620,h:28},{x:90,y:195,w:620,h:28},
+                {x:90,y:285,w:620,h:28},{x:90,y:375,w:620,h:28} ];
+/* 측정자 이동 경로(통로를 지그재그로) */
+const path = [{x:55,y:65},{x:745,y:65},{x:745,y:160},{x:55,y:160},{x:55,y:250},
+              {x:745,y:250},{x:745,y:340},{x:55,y:340},{x:55,y:425},{x:745,y:425}];
+
+const segLen = []; let totalLen = 0;
+for (let i=0;i<path.length-1;i++){
+  const L = Math.hypot(path[i+1].x-path[i].x, path[i+1].y-path[i].y);
+  segLen.push(L); totalLen += L;
+}
+function posAt(dist){
+  let d = dist;
+  for (let i=0;i<segLen.length;i++){
+    if (d <= segLen[i]){
+      const t = d/segLen[i];
+      return {x: path[i].x+(path[i+1].x-path[i].x)*t,
+              y: path[i].y+(path[i+1].y-path[i].y)*t};
+    }
+    d -= segLen[i];
+  }
+  return path[path.length-1];
+}
+function rssiAt(x,y){                 /* 간단 전파모델: 거리 기반 감쇠 */
+  let best = -95;
+  for (const ap of aps){
+    const d = Math.max(Math.hypot(x-ap.x, y-ap.y), 8);
+    const r = -35 - 30*Math.log10(d/8);
+    if (r > best) best = r;
+  }
+  return Math.max(-95, Math.min(-35, best));
+}
+function colorFor(r, a){              /* -95(빨강) → -35(초록) */
+  const hue = (r+95)/60*120;
+  return `hsla(${hue},85%,48%,${a})`;
+}
+
+let dist = 0, samples = [], phase = 'survey', phaseT = 0;
+const SPEED = 2.2, SAMPLE_GAP = 26;  let lastSample = -999;
+
+function drawFloor(){
+  ctx.fillStyle = '#eef2f6'; ctx.fillRect(0,0,W,H);
+  ctx.fillStyle = '#90a4b8';
+  racks.forEach(r => ctx.fillRect(r.x,r.y,r.w,r.h));
+  ctx.font = '11px sans-serif'; ctx.fillStyle = '#627d98';
+  racks.forEach(r => ctx.fillText('RACK', r.x+6, r.y+19));
+  aps.forEach(ap => {
+    ctx.beginPath(); ctx.arc(ap.x,ap.y,7,0,7); ctx.fillStyle='#2b6cb0'; ctx.fill();
+    ctx.fillStyle = '#243b53'; ctx.fillText(ap.n, ap.x-10, ap.y-12);
+  });
+}
+function drawHeatmap(alpha){
+  const cell = 16;
+  for (let gx=0; gx<W; gx+=cell)
+    for (let gy=0; gy<H; gy+=cell){
+      ctx.fillStyle = colorFor(rssiAt(gx+cell/2, gy+cell/2), 0.45*alpha);
+      ctx.fillRect(gx,gy,cell,cell);
+    }
+  /* 범례 */
+  ctx.fillStyle = `rgba(255,255,255,${0.9*alpha})`;
+  ctx.fillRect(W-190, H-62, 180, 50);
+  ctx.font = '12px sans-serif';
+  [['강(-35dBm)','-35'],['중(-65dBm)','-65'],['약(-95dBm)','-95']].forEach((v,i)=>{
+    ctx.fillStyle = colorFor(parseInt(v[1]), alpha);
+    ctx.fillRect(W-180, H-54+i*14, 12, 10);
+    ctx.fillStyle = `rgba(36,59,83,${alpha})`;
+    ctx.fillText(v[0], W-162, H-45+i*14);
+  });
+}
+function frame(){
+  drawFloor();
+  if (phase === 'survey'){
+    dist += SPEED;
+    if (dist - lastSample > SAMPLE_GAP){
+      const p = posAt(dist);
+      samples.push({x:p.x, y:p.y, r:rssiAt(p.x,p.y)});
+      lastSample = dist;
+    }
+    samples.forEach(s => { ctx.beginPath(); ctx.arc(s.x,s.y,5,0,7);
+      ctx.fillStyle = colorFor(s.r,0.9); ctx.fill(); });
+    const p = posAt(dist), r = rssiAt(p.x,p.y);
+    ctx.beginPath(); ctx.arc(p.x,p.y,8,0,7);           /* 측정자 */
+    ctx.fillStyle = '#102a43'; ctx.fill();
+    ctx.font = 'bold 13px sans-serif'; ctx.fillStyle = '#102a43';
+    ctx.fillText(`SSID: Autolab-5G  RSSI: ${r.toFixed(0)} dBm`, 16, 24);
+    ctx.font = '11px sans-serif';
+    ctx.fillText('측정 중…(노트북 휴대 이동 측정)', 16, 42);
+    if (dist >= totalLen){ phase='fade'; phaseT=0; }
+  } else if (phase === 'fade'){
+    phaseT += 0.02;
+    drawHeatmap(Math.min(phaseT,1));
+    ctx.font = 'bold 15px sans-serif'; ctx.fillStyle = '#102a43';
+    ctx.fillText('측정 완료 → WiFi Heatmap', 16, 26);
+    if (phaseT >= 3.5){ phase='survey'; dist=0; samples=[]; lastSample=-999; }
+  }
+  requestAnimationFrame(frame);
+}
+frame();
+</script>
+</body>
+</html>
